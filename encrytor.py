@@ -11,14 +11,12 @@ def encryptMD5(string):
 input_file = open("test.csv", "r")	
 line = input_file.readline()
 
-# number of lines in the file
-index = 0
 
-#read all the lines of the file one by one
+#read all the lines of the file one by one and hash them
 while line != "":
-	index += 1
-	print str(index) + ": " + line[:-1]
+	print encryptMD5(line[:-1])
 	line = input_file.readline()
+
 
 
 
